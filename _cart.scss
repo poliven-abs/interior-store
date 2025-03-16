@@ -1,0 +1,215 @@
+.top-bag {
+    height: 400px;
+    background-image: url(img/img-bag.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 64px;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    padding-bottom: 64px;
+    &__content {
+        grid-column: span 8;
+    }
+
+    &-name {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        width: 756px;
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+    &__item {
+        border-top: 0.5px solid #cacdd8;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    &__info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+    &-product {
+        &__name {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+        }
+
+        &__description {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #888;
+        }
+
+        &__price {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+    }
+
+    &__link-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 210%;
+        text-decoration-line: underline;
+        color: #000;
+        margin-right: 30px;
+        transition: all 0.5s;
+        &:hover {
+            color: #888;
+            text-decoration: none;
+        }
+    }
+
+    &__number {
+        height: 51px;
+        width: 71px;
+        border-radius: 6px;
+        background-color: #f7f6f6;
+        border: none;
+        text-align: center;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 210%;
+    }
+
+    &-supplement {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+        padding-top: 18px;
+        &__button {
+            width: 200px;
+            height: 37px;
+            color: #000;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            background-color: transparent;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        &__button:hover {
+            color: #fff;
+            background: #000;
+        }
+    }
+
+    &__form {
+        background: #f7f6f6;
+        border-radius: 20px;
+        height: 556px;
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__order-text {
+        color: #000;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 42px;
+        padding-bottom: 35px;
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+        align-items: center;
+        margin-bottom: 64px;
+        margin-left: -27px;
+
+    }
+    &-order {
+        &__info {
+            font: inherit;
+            color: #000;
+            width: 288px;
+            background-color: transparent;
+            outline: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid #CACDD8;
+        }
+        &__info::placeholder {
+            color: #000;
+        }
+    }
+
+    &__total {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+        &-text {
+            font: inherit;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+            color: #000;
+        }
+        &-price {
+            font: inherit;
+            font-size: 24px;
+            font-weight: 500;
+            color: #000;
+        }
+    }
+    &__order-button {
+        width: 290px;
+        height: 41px;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 1px solid #000;
+        border-radius: 20px;
+        font: inherit;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #000;
+        transition: all 0.3s;
+        &:hover {
+            color: #fff;
+            background: #000;
+        }
+    }
+}

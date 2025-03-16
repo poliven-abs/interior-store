@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-catalog center">
+        <header class="header">
+            <a class="header__logo" href="index.html"><img class="header__logo-img" src="img/logo.svg" alt="logo"></a>
+            <input placeholder="Поиск" class="header__input" type="text">
+            <nav>
+                <ul class="menu">
+                    <li class="menu__list"><a class="menu__link" href="catalog.html">Каталог</a></li>
+                    <li class="menu__list"><a class="menu__link" href="bag.html">Корзина</a></li>
+                </ul>
+            </nav>
+            <div class="menu-mobile">
+                <a class="menu-mobile__link" href="#"><img src="img/mobile/mob-_search.svg" alt="seach"></a>
+                <a class="menu-mobile__link" href="catalog.html"><img src="img/mobile/mob-catalog.svg" alt="catalog"></a>
+                <a class="menu-mobile__link" href="bag.html"><img src="img/mobile/mob-bag.svg" alt="bag"></a>
+            </div>
+        </header>
+        <section class="top__content">
+            <h1 class="title-text">Каталог</h1>
+        </section>
+    </div>
+
+    <div>
+        <section class="menu-catalog center">
+            <div class="menu-catalog__link">
+                <a class="menu__link-catalog" href="index.html">Главная</a>
+                <p class="menu__link-catalog">/</p>
+                <a class="menu__link-catalog" href="catalog.html">Каталог товаров</a>
+            </div>
+
+            <div class="menu-catalog__filter">
+                <div class="filter">
+                    <button type="button" onclick="window.modalWindow.show()"
+                        class="catalog__button catalog__button-filter">Фильтрация</button>
+                    <form class="filter-form" action="#" method="get">
+                        <div class="filter-colum1">
+                            <fieldset class="filter-box">
+                                <legend class="filter-text">Сроки доставки</legend>
+                                <div class="filter__delivery">
+                                    <input class="filter__delivery-check" type="radio" id="nomatter"><label
+                                        for="nomatter" class="filter__delivery-label">Неважно</label>
+                                    <input class="filter__delivery-check" type="radio" id="today"><label for="today"
+                                        class="filter__delivery-label">Сегодня</label>
+                                    <input class="filter__delivery-check" type="radio" id="tomorrow"><label
+                                        for="tomorrow" class="filter__delivery-label">Завтра</label>
+                                    <input class="filter__delivery-check" type="radio" id="3-days"><label for="3-days"
+                                        class="filter__delivery-label">До 3 дней</label>
+                                    <input class="filter__delivery-check" type="radio" id="7-days"><label for="7-days"
+                                        class="filter__delivery-label">До 7 дней</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="filter-box">
+                                <legend class="filter-text">Цена</legend>
+                                <div class="filter__price">
+                                    <p class="filter__price-name">от 0 руб.</p>
+                                    <p class="filter__price-name">до 100000 руб.</p>
+                                </div>
+                                <div>
+                                    <input type="range" min="0" max="100000" class="filter__price-range price_min"
+                                        value="0">
+                                    <input type="range" min="0" max="100000" class="filter__price-range price_max"
+                                        value="100000">
+                                </div>
+                            </fieldset>
+                            <fieldset class="filter-box">
+                                <legend class="filter-text">Цвет</legend>
+                                <div class="filter__color">
+                                    <input class="filter-color filter-color_1" type="checkbox" id="white"
+                                        name="color"><label for="white" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_2" type="checkbox" id="black"
+                                        name="color"><label for="black" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_3" type="checkbox" id="grey"
+                                        name="color"><label for="grey" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_4" type="checkbox" id="red"
+                                        name="color"><label for="red" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_5" type="checkbox" id="orange"
+                                        name="color"><label for="orange" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_6" type="checkbox" id="yellow"
+                                        name="color"><label for="yellow" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_7" type="checkbox" id="green"
+                                        name="color"><label for="green" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_8" type="checkbox" id="aqua"
+                                        name="color"><label for="aqua" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_9" type="checkbox" id="blue"
+                                        name="color"><label for="blue" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_10" type="checkbox" id="cyan"
+                                        name="color"><label for="cyan" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_11" type="checkbox" id="violet"
+                                        name="color"><label for="violet" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_12" type="checkbox" id="purple"
+                                        name="color"><label for="purple" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_13" type="checkbox" id="lilac"
+                                        name="color"><label for="lilac" class="filter-color__label"></label>
+                                    <input class="filter-color filter-color_14" type="checkbox" id="pink"
+                                        name="color"><label for="pink" class="filter-color__label"></label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="filter-colum2">
+                            <fieldset class="filter-box">
+                                <legend class="filter-text">Тип комнаты</legend>
+                                <div class="filter__type">
+                                    <input class="filter__type-room" type="checkbox" id="kitchen"><label for="kitchen"
+                                        class="filter__type-label">Кухня и столовая</label>
+                                    <input class="filter__type-room" type="checkbox" id="bath"><label for="bath"
+                                        class="filter__type-label">Ванная комната</label>
+                                    <input class="filter__type-room" type="checkbox" id="child"><label for="child"
+                                        class="filter__type-label">Детская комната</label>
+                                    <input class="filter__type-room" type="checkbox" id="homeoffice"><label
+                                        for="homeoffice" class="filter__type-label">Домашний офис</label>
+                                    <input class="filter__type-room" type="checkbox" id="lounge"><label for="lounge"
+                                        class="filter__type-label">Гостиная</label>
+                                    <input class="filter__type-room" type="checkbox" id="vestibule"><label
+                                        for="vestibule" class="filter__type-label">Прихожая</label>
+                                    <input class="filter__type-room" type="checkbox" id="sleep"><label for="sleep"
+                                        class="filter__type-label">Спальня</label>
+                                    <input class="filter__type-room" type="checkbox" id="wardrobe"><label for="wardrobe"
+                                        class="filter__type-label">Гардероб</label>
+                                    <input class="filter__type-room" type="checkbox" id="cottage"><label for="cottage"
+                                        class="filter__type-label">Дача</label>
+                                    <input class="filter__type-room" type="checkbox" id="laght"><label for="laght"
+                                        class="filter__type-label">Свет</label>
+                                </div>
+                            </fieldset>
+                            <div class="filter-box__button">
+                                <button class="filter-button">Применить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <select name="choice" id="hoice-select" class="catalog__button catalog__button-choice">
+                    <option value="popular" class="choice-text">По популярности</option>
+                    <option value="first" class="choice-text">Порядок: Сперва новые</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="catalog-catalog center">
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/bed-tatran.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кровать TATRAN</h3>
+                <p class="catalog-product__description">Основание из полированной нержавеющей стали, придает
+                    оригинальный парящий эффект.</p>
+                <p class="catalog-product__price">120 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/chair-vilora.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кресло VILORA</h3>
+                <p class="catalog-product__description">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                    и приятная на ощупь ткань.</p>
+                <p class="catalog-product__price">21 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/table-menu.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Стол MENU</h3>
+                <p class="catalog-product__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                <p class="catalog-product__price">34 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/sofa-askesta.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Диван ASKESTA</h3>
+                <p class="catalog-product__description">Благодаря защелкивающемуся механизму диван легко раскладывается
+                    в комфортную кровать.</p>
+                <p class="catalog-product__price">68 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/chair-lunar.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кресло LUNAR</h3>
+                <p class="catalog-product__description">Прекрасно переносит солнечные лучи, перепады влажности и любые
+                    осадки.</p>
+                <p class="catalog-product__price">40 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/closet-nastan.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Шкаф Nastan</h3>
+                <p class="catalog-product__description">Мебель может быть оснащена разнообразными системами подсветки.
+                </p>
+                <p class="catalog-product__price">80 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/bed-tatran.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кровать TATRAN</h3>
+                <p class="catalog-product__description">Основание из полированной нержавеющей стали, придает
+                    оригинальный парящий эффект.</p>
+                <p class="catalog-product__price">120 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/chair-vilora.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кресло VILORA</h3>
+                <p class="catalog-product__description">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья
+                    и приятная на ощупь ткань.</p>
+                <p class="catalog-product__price">21 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/table-menu.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Стол MENU</h3>
+                <p class="catalog-product__description">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                <p class="catalog-product__price">34 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/sofa-askesta.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Диван ASKESTA</h3>
+                <p class="catalog-product__description">Благодаря защелкивающемуся механизму диван легко раскладывается
+                    в комфортную кровать.</p>
+                <p class="catalog-product__price">68 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/chair-lunar.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Кресло LUNAR</h3>
+                <p class="catalog-product__description">Прекрасно переносит солнечные лучи, перепады влажности и любые
+                    осадки.</p>
+                <p class="catalog-product__price">40 000 руб.</p>
+            </article>
+            <article class="catalog-product icon">
+                <div class="icon__info">
+                    <button class="icon__button"><img class="icon__bag" src="img/catalog/bag.png"
+                            alt="bag"></button>
+                    <button class="icon__button"><img class="icon__like" src="img/catalog/heart.png"
+                            alt="like"></button>
+                </div>
+                <img src="img/catalog/full/closet-nastan.jpg" alt="Продукт" class="catalog-product__img">
+                <h3 class="catalog-product__name">Шкаф Nastan</h3>
+                <p class="catalog-product__description">Мебель может быть оснащена разнообразными системами подсветки.
+                </p>
+                <p class="catalog-product__price">80 000 руб.</p>
+            </article>
+        </section>
+        <section class="center">
+            <a href="#" class="link">Показать ещё</a>
+        </section>
+    </div>
+
+    <footer class="footer center">
+        <a class="footer__logo" href="index.html"><img src="img/logo-f.svg" alt="logo"></a>
+        <div class="footer__content">
+            <div class="footer__info">
+                <nav class="footer__item">
+                    <h4 class="footer__menu">Меню</h4>
+                    <ul>
+                        <li class="footer-menu__list"><a class="footer-menu__link" href="index.html">Главная</a></li>
+                        <li class="footer-menu__list"><a class="footer-menu__link" href="catalog.html">Каталог</a></li>
+                        <li class="footer-menu__list"><a class="footer-menu__link" href="bag.html">Корзина</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__item">
+                    <h4 class="footer__menu">Контакты</h4>
+                    <a class="footer__contact" href="tel:+79088008080">+7 908 800 80 80</a>
+                    <a class="footer__contact" href="mailto:help@interier.com">help@interier.com</a>
+                    <div class="footer__label">
+                        <a href="#">
+                            <svg class="label__link" width="24.000504" height="14.000000" viewBox="0 0 24.0005 14"
+                                fill="none" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs />
+                                <path id="Vector"
+                                    d="M23.45 0.94C23.61 0.4 23.45 0 22.65 0L20.03 0C19.36 0 19.05 0.34 18.88 0.72C18.88 0.72 17.55 3.92 15.66 6C15.04 6.6 14.77 6.79 14.43 6.79C14.27 6.79 14.01 6.6 14.01 6.05L14.01 0.94C14.01 0.29 13.83 0 13.27 0L9.15 0C8.73 0 8.48 0.3 8.48 0.59C8.48 1.21 9.42 1.35 9.52 3.1L9.52 6.9C9.52 7.73 9.37 7.88 9.03 7.88C8.14 7.88 5.98 4.67 4.69 1C4.44 0.28 4.19 0 3.52 0L0.9 0C0.15 0 0 0.34 0 0.72C0 1.41 0.88 4.8 4.14 9.28C6.31 12.34 9.37 14 12.15 14C13.82 14 14.02 13.63 14.02 12.99L14.02 10.68C14.02 9.94 14.18 9.8 14.71 9.8C15.1 9.8 15.77 9.99 17.33 11.46C19.11 13.21 19.4 14 20.4 14L23.03 14C23.78 14 24.15 13.63 23.94 12.9C23.7 12.18 22.85 11.12 21.72 9.88C21.11 9.17 20.19 8.4 19.91 8.02C19.52 7.53 19.63 7.31 19.91 6.87C19.91 6.87 23.11 2.45 23.44 0.94L23.45 0.94Z"
+                                    fill="#888888" fill-opacity="1.000000" fill-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="label__link" width="21.000000" height="17.675659" viewBox="0 0 21 17.6757"
+                                fill="none" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs />
+                                <path id="Vector"
+                                    d="M19.29 0.2L0.69 7.41C-0.06 7.74 -0.32 8.42 0.5 8.78L5.28 10.31L16.82 3.14C17.45 2.69 18.09 2.81 17.54 3.3L7.63 12.32L7.31 16.14C7.6 16.73 8.13 16.73 8.47 16.44L11.21 13.83L15.91 17.37C17 18.02 17.59 17.6 17.83 16.41L20.91 1.74C21.23 0.28 20.68 -0.37 19.29 0.2Z"
+                                    fill="#888888" fill-opacity="1.000000" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="label__link" width="19.000000" height="18.000000" viewBox="0 0 19 18"
+                                fill="none" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs />
+                                <path id="Vector"
+                                    d="M11.33 10.73C9.83 12.19 9.73 14.01 9.6 18C13.52 18 16.23 17.98 17.62 16.7C18.98 15.37 19 12.68 19 9.09C14.79 9.22 12.87 9.32 11.33 10.73ZM0 9.09C0 12.68 0.01 15.37 1.37 16.7C2.76 17.98 5.47 18 9.39 18C9.26 14.01 9.16 12.19 7.66 10.73C6.12 9.32 4.2 9.21 0 9.09ZM9.39 0C5.48 0 2.76 0.01 1.37 1.29C0.01 2.62 0 5.31 0 8.9C4.2 8.77 6.12 8.67 7.66 7.26C9.16 5.8 9.26 3.98 9.39 0ZM11.33 7.26C9.83 5.8 9.73 3.98 9.6 0C13.52 0 16.23 0.01 17.62 1.29C18.98 2.62 19 5.31 19 8.9C14.79 8.77 12.87 8.67 11.33 7.26Z"
+                                    fill="#888888" fill-opacity="1.000000" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <form class="footer__form" action="#">
+                <p class="footer__news">Получайте наши новости и обновления</p>
+                <input placeholder="Ваш e-mail" class="footer__input" type="email">
+                <button class="footer__button">Подписаться</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+
+</html>
